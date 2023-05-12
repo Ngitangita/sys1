@@ -1,0 +1,60 @@
+﻿* FTP - Authentification
+Pour trouver le mot de passe utilisé par un utilisateur lors d'un échange authentifié de fichier via le protocole FTP,
+*  Il faut télécharger le fichier ch1.pcap et l'ouvrir avec Wireshark.
+*  Ensuite, il faut rechercher les paquets correspondant au protocole FTP. 
+* Dans la colonne "info", une ligne contenant "Request: PASS" sera affichée et le mot de passe y sera indiqué. 
+
+
+
+
+* TELENET - AUTHENTIFICATION
+Pour trouver le mot de passe dans le fichier ch2.pcap en utilisant Wireshark,
+* il faut ouvrir le fichier dans l'application et suivre le flux TCP. 
+* Ensuite, un onglet s'ouvrira et le mot de passe y sera mentionné.
+
+
+
+
+* Authentification Twitter
+* .Lancer le challenge (Téléchargement d'un fichier)
+* . Ouvrir le fichier sur Wireshark
+* . Cliquez droit sur le protocole HTTP
+* . Suivre son flux
+* . Le mot de passe est à côté de Authorization basic mais il est codé en base64 (Présence de == vers la fin)
+
+
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Authorization: Basic d***********************=
+Connection: keep-alive
+Host: twitter.com
+* . Décodeur le mot de passe (le mot de passe final commence après le : )
+
+
+usertest:p*******
+
+
+
+
+* ETHERNET-TRAME
+* Sur ce site, une série de codes hexadécimaux est affichée. 
+* Pour les utiliser, il faut les convertir en texte à l'aide d'un outil en ligne tel que "hex to text". 
+* Une fois la conversion effectuée, on peut utiliser un autre outil en ligne tel que "base64" pour convertir le texte en un mot de passe utilisable.
+
+
+
+
+* Bluetooth - Fichier inconnu:
+
+
+*    Démarrez le challenge, afin de télécharger le fichier "ch18.bin"
+
+
+*  Ouvrir le fichier dans wireshark, cliquer sur sans fil puis cliquer sur équipements bluetooth.
+
+
+* faut concaténer l'adresse MAC (en majuscule) et le nom du téléphone
+
+
+0C:B3:19:B9:4F:C6GT-S7390G 
+* Puis on chiffre cette concaténation en SHA1 pour obtenir le mot de passe c1************************************
